@@ -1,0 +1,50 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="" method="">
+    <label for="title-input">Title:</label>
+    <input type="text" name="title" id="title-input">
+    <label for="case-input">Case:</label>
+    <input type="text" name="case" id="case-input">
+    <label for="graphic-select">Graphics Card:</label>
+    <select name="graphic" id="graphic-select">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <label for="motherbo-select">Mother Board:</label>
+    <select name="motherbo" id="motherbo-select">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <label for="storage-select">Storage:</label>
+    <select name="storage" id="storage-select">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <label for="psu-select">PSU:</label>
+    <select name="psu" id="psu-select">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <label for="ram-select">RAM:</label>
+    <select name="ram" id="ram-select">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <button type="submit">Add Finalized PC</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

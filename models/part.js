@@ -10,6 +10,7 @@ const partSchema = new Schema({
   storage: String,
   psu: String,
   ram: String,
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
 })
