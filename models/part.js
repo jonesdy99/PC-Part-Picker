@@ -10,4 +10,13 @@ const partSchema = new Schema({
   storage: String,
   psu: String,
   ram: String,
+}, {
+  timestamps: true
 })
+
+
+const Part = mongoose.model('Part', partSchema)
+
+export{
+  Part
+}
