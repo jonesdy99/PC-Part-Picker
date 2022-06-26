@@ -1,0 +1,22 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+
+<section>
+  <h2>All the PC's</h2>
+  <ul>
+    <% parts.forEach(part => { %>
+      <li>Name:<a href="/parts/<%= part._id %>"><%= part.title %></a>
+          Case:<%= part.case %>
+          Graphics Card:<%= part.graphic %>
+          MotherBoard:<%= part.motherbo %>
+          Storage:<%= part.storage %>
+          Power Supply:<%= part.psu %>
+          RAM:<%= part.ram %>
+          Owner:<%= part.owner %>
+      </li>
+    <% }) %> 
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

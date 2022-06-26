@@ -9,6 +9,8 @@ const router = Router()
 
 router.get('/', partsCtrl.index)
 
+router.get('/new', partsCtrl.new)
+
 router.post('/', isLoggedIn, partsCtrl.create)
 
 export{

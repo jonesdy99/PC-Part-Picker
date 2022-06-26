@@ -24,7 +24,7 @@ function create(req,res){
   req.body.owner = req.user.profile._id
   Part.create(req.body)
   .then(part => {
-    res.redirect('/parts')
+    res.redirect('/parts/new')
   })
   .catch(err => {
     console.log(err)
@@ -32,7 +32,23 @@ function create(req,res){
   })
 }
 
+function newBuild(req,res){
+  Part.find({})
+  .then(parts => {
+    res.render('parts/new', {
+      parts,
+      title: 'All the PCs',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+
 export{
   index,
-  create
+  create,
+  newBuild as new
 }
