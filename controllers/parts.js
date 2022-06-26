@@ -11,7 +11,7 @@ function index(req,res){
   .then(parts => {
     res.render('parts/index', {
       parts,
-      title: 'Add a PC!'
+      title: 'Create a PC!',
     })
   })
   .catch(err => {
@@ -20,6 +20,19 @@ function index(req,res){
   })
 }
 
+function create(req,res){
+  req.body.owner = req.user.profile._id
+  Part.create(req.body)
+  .then(part => {
+    res.redirect('/parts')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 export{
-  index
+  index,
+  create
 }

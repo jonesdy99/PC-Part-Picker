@@ -3,7 +3,7 @@
 
 <main>
   <h1><%= title %></h1>
-  <form id="new-form" action="" method="">
+  <form id="new-form" action="/parts" method="POST">
     <label for="title-input">Title:</label>
     <input type="text" name="title" id="title-input">
     <label for="case-input">Case:</label>
@@ -76,5 +76,14 @@
     <button type="submit">Add Finalized PC</button>
   </form>
 </main>
+
+<section>
+  <h2>All the PC's</h2>
+  <ul>
+    <% parts.forEach(part => { %>
+      <li><%= part.title %><%= part.case %></li>
+    <% }) %> 
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>
