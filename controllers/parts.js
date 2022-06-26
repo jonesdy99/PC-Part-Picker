@@ -46,9 +46,25 @@ function newBuild(req,res){
   })
 }
 
+function show(req,res){
+  Part.findById(req.params.id)
+  .populate('owner')
+  .then(part => {
+    res.render('parts/show', {
+      part,
+      title: 'Detailed PC info'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 
 export{
   index,
   create,
-  newBuild as new
+  newBuild as new,
+  show
 }

@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>This Pc was built by <%= part.owner.name %></h1>
+  <h2><%= part.title %></h2>
+  <h3>Case:<%= part.case %>
+          Graphics Card:<%= part.graphic %>
+          MotherBoard:<%= part.motherbo %>
+          Storage:<%= part.storage %>
+          Power Supply:<%= part.psu %>
+          RAM:<%= part.ram %></h3>
+</section>
+
+<%- include('../partials/footer') %>
