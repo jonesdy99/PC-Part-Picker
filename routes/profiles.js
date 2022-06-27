@@ -10,6 +10,8 @@ router.get('/:id', isLoggedIn, profilesCtrl.show)
 
 router.post('/:id/budget', isLoggedIn, profilesCtrl.createBudget)
 
+router.delete('/budget/:id', isLoggedIn, profilesCtrl.deleteBudget)
+
 export{
   router
 }

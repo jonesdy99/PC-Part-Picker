@@ -26,6 +26,15 @@
     <h2>
       <%= isSelf ? 'You have' : `${profile.name} has`%> a budget of <%= profile.budget[0].budget %>   
     </h2>
+    <% profile.budget.forEach((budget,idx) => { %>
+      <h3>
+        <% if (isSelf) { %>
+          <form action="/profiles/budget/<%= budget._id %>?_method=DELETE" method="POST" style="display: inline-block;">
+            <button type="submit">Delete current budget of <%= profile.budget[idx].budget %> </button>
+          </form>
+        <% } %> 
+      </h3>
+    <% }) %>
   <% } else { %>
     <h2>
       <%= isSelf ? "You don't" : `${profile.name} doesn't`%> have a budget. 

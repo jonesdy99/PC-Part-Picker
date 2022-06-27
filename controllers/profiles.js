@@ -37,11 +37,29 @@ function createBudget(req,res){
   })
 }
 
+function deleteBudget(req,res) { 
+  console.log(req.user.profile)
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    console.log(profile,'banana')
+    profile.budget.remove({_id: req.params.id})
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+}
+
 
 
 
 export{
   index,
   show,
-  createBudget
+  createBudget,
+  deleteBudget
 }
