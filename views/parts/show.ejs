@@ -15,5 +15,8 @@
   <form action="/parts/<%= part._id %>/edit" method="GET">
     <button class="btn" type="submit">Edit this PC</button>
   </form>
+  <form action="/parts/<%= part._id %>?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete this PC</button>
+  </form>
 <% } %>   
 <%- include('../partials/footer') %>

@@ -93,6 +93,24 @@ function update(req,res){
   })
 }
 
+function deletePc(req,res){
+  Part.findById(req.params.id)
+  .then(part => {
+    if(part.owner.equals(req.user.profile._id)){
+      part.delete()
+      .then(() => {
+        res.redirect('/parts')
+      })
+    } else {
+      throw new Error ('Not Authorized to delete this PC')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 
 export{
   index,
@@ -100,5 +118,6 @@ export{
   newBuild as new,
   show,
   edit,
-  update
+  update,
+  deletePc as delete
 }
