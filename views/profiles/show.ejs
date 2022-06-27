@@ -12,6 +12,25 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <% if (isSelf) { %>
+    <h2>Add your desired budget</h2>
+    <form action="/profiles/<%= profile._id %>/budget" method="POST">
+      <label>
+        Desired Budget:
+        <input type="number" name="budget" autocomplete="off">
+      </label>
+      <button type="submit">Add your desired budget</button>
+    </form>
+  <% } %>
+  <% if (profile.budget.length) { %>
+    <h2>
+      <%= isSelf ? 'You have' : `${profile.name} has`%> a budget of <%= profile.budget[0].budget %>   
+    </h2>
+  <% } else { %>
+    <h2>
+      <%= isSelf ? "You don't" : `${profile.name} doesn't`%> have a budget. 
+    </h2>
+    <% } %> 
 </main>
 
 <%- include('../partials/footer') %>
