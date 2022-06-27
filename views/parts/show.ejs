@@ -5,11 +5,11 @@
   <h1>This Pc was built by <%= part.owner.name %></h1>
   <h2><%= part.title %></h2>
   <h3>Case:<%= part.case %>
-          Graphics Card:<%= part.graphic %>
-          MotherBoard:<%= part.motherbo %>
-          Storage:<%= part.storage %>
-          Power Supply:<%= part.psu %>
-          RAM:<%= part.ram %></h3>
+    Graphics Card:<%= part.graphic %>
+    MotherBoard:<%= part.motherbo %>
+    Storage:<%= part.storage %>
+    Power Supply:<%= part.psu %>
+    RAM:<%= part.ram %></h3>
 </section>
 <% if (part.owner.equals(user?.profile._id)) { %> 
   <form action="/parts/<%= part._id %>/edit" method="GET">
