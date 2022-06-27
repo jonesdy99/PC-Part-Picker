@@ -99,7 +99,7 @@ function deletePc(req,res){
     if(part.owner.equals(req.user.profile._id)){
       part.delete()
       .then(() => {
-        res.redirect('/parts')
+        res.redirect('/parts/new')
       })
     } else {
       throw new Error ('Not Authorized to delete this PC')
