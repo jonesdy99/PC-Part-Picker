@@ -17,6 +17,8 @@ router.get('/:id/edit', isLoggedIn, partsCtrl.edit)
 
 router.post('/', isLoggedIn, partsCtrl.create)
 
+router.put('/:id', isLoggedIn, partsCtrl.update)
+
 export{
   router
 }

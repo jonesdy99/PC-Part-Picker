@@ -75,11 +75,30 @@ function edit(req,res){
   })
 }
 
+function update(req,res){
+  Part.findById(req.params.id)
+  .then(part => {
+    if (part.owner.equals(req.user.profile._id)) {
+      part.updateOne(req.body, {new: true})
+      .then(updatedPart => {
+        res.redirect(`/parts/${part._id}`)
+      })
+    } else {
+      throw new Error ('Not Authorized to change this PC')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 
 export{
   index,
   create,
   newBuild as new,
   show,
-  edit
+  edit,
+  update
 }
