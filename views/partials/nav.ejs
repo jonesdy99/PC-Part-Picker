@@ -1,13 +1,14 @@
   <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
   <% } %>
 </head>
 <body>
   <nav>
-    <a href="/parts">Start building!</a>
-    <a href="/parts/new">All Pcs</a>
-    <a href="/profiles">Users</a>
-    <a href="/">Home</a>
+    <a class="nav" href="/parts">Start building!</a>
+    <a class="nav" href="/parts/new">All Pcs</a>
+    <a class="nav" href="/profiles">Users</a>
+    <a class="nav" href="/">Home</a>
     <% if (user) { %>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
