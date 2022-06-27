@@ -11,5 +11,9 @@
           Power Supply:<%= part.psu %>
           RAM:<%= part.ram %></h3>
 </section>
-
+<% if (part.owner.equals(user?.profile._id)) { %> 
+  <form action="/parts/<%= part._id %>/edit" method="GET">
+    <button class="btn" type="submit">Edit this PC</button>
+  </form>
+<% } %>   
 <%- include('../partials/footer') %>

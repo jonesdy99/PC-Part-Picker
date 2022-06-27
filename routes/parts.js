@@ -13,6 +13,8 @@ router.get('/new', partsCtrl.new)
 
 router.get('/:id', partsCtrl.show)
 
+router.get('/:id/edit', isLoggedIn, partsCtrl.edit)
+
 router.post('/', isLoggedIn, partsCtrl.create)
 
 export{

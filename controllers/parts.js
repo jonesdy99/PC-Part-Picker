@@ -61,10 +61,25 @@ function show(req,res){
   })
 }
 
+function edit(req,res){
+  Part.findById(req.params.id)
+  .then(part => {
+    res.render('parts/edit', {
+      part,
+      title: 'Edit this PC'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 
 export{
   index,
   create,
   newBuild as new,
-  show
+  show,
+  edit
 }
