@@ -21,6 +21,9 @@ router.put('/:id', isLoggedIn, partsCtrl.update)
 
 router.delete('/:id', isLoggedIn, partsCtrl.delete)
 
+router.post('/:id/reviews', isLoggedIn, partsCtrl.createReview)
+
+
 export{
   router
 }

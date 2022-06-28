@@ -111,6 +111,17 @@ function deletePc(req,res){
   })
 }
 
+function createReview(req,res){
+  Part.findById(req.params.id)
+  .then(part =>{
+    part.reviews.push(req.body)
+    part.save()
+    .then(() => {
+      res.redirect(`/parts/${part._id}`)
+    })
+  })
+}
+
 
 export{
   index,
@@ -119,5 +130,6 @@ export{
   show,
   edit,
   update,
-  deletePc as delete
+  deletePc as delete,
+  createReview
 }
