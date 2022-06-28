@@ -31,6 +31,10 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url(../images/auth/google/Back-Drop-2.jpeg);
+  background-size: 200vh;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -40,6 +44,7 @@ h1 {
 h2 {
   font-size: 30px;
 }
+
 
 h3 {
   font-size: 24px;

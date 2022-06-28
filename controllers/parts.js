@@ -111,6 +111,24 @@ function deletePc(req,res){
   })
 }
 
+function deleteReview(req,res){
+  Reviews.findById(req.params.id)
+  .then(part => {
+    if(reviews.owner.equals(req.user.profile._id)){
+      review.delete()
+      .then(() => {
+        res.redirect(`/review/${part._id}`)
+      })
+    } else {
+      throw new Error ('Not Authorized to delete this Review')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/parts')
+  })
+}
+
 function createReview(req,res){
   Part.findById(req.params.id)
   .then(part =>{
@@ -123,6 +141,8 @@ function createReview(req,res){
 }
 
 
+
+
 export{
   index,
   create,
@@ -131,5 +151,6 @@ export{
   edit,
   update,
   deletePc as delete,
-  createReview
+  createReview,
+  deleteReview
 }

@@ -23,6 +23,8 @@ router.delete('/:id', isLoggedIn, partsCtrl.delete)
 
 router.post('/:id/reviews', isLoggedIn, partsCtrl.createReview)
 
+router.delete('/review/:id', isLoggedIn, partsCtrl.deleteReview)
+
 
 export{
   router

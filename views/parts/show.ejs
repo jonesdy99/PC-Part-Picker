@@ -37,7 +37,7 @@
         <% part.reviews.forEach(function(review) { %>
           <tr>
             <td><%= review.createdAt.toLocaleDateString() %></td>
-            <td><%= review.content %></td><button type="submit">Delete Review</button>
+            <td><%= review.content %></td>
           </tr>
         <% }) %>
       </tbody>
@@ -45,4 +45,9 @@
   <% } else { %>
     <h3>No Reviews Yet</h3>
   <% } %>
+  <% if (part.owner.equals(user?.profile._id)) { %> 
+    <form action="/review/<%= part._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this Review</button>
+    </form>
+  <% } %> 
 <%- include('../partials/footer') %>
