@@ -1,27 +1,46 @@
+
 h1{
   display: flex;
   text-align: center;
-  color: white;
+  color: whitesmoke;
   text-decoration: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2{
+  text-align: center;
+  display: flex;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav{
   background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
 }
 
 nav{
   background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
 }
 
 .login{
   margin-left: 100px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .logout{
   margin-left: 100px;
-
+  background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
 }
 
 .avatar{
   border-radius: 50%;
 }
+

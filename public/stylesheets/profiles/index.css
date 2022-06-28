@@ -44,8 +44,21 @@
 
 .nav{
   background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
 }
 
 nav{
   background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.logout{
+  margin-left: 100px;
+  background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
 }
