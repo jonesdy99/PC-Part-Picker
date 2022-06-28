@@ -112,12 +112,14 @@ function deletePc(req,res){
 }
 
 function deleteReview(req,res){
-  Reviews.findById(req.params.id)
+  Part.findById(req.params.partId)
   .then(part => {
-    if(reviews.owner.equals(req.user.profile._id)){
-      review.delete()
+    const review = part.reviews.id(req.params.reviewId)
+    if(review.owner.equals(req.user.profile._id)){
+      part.reviews.remove({_id:req.params.reviewId})
+      part.save()
       .then(() => {
-        res.redirect(`/review/${part._id}`)
+        res.redirect(`/parts/${part._id}`)
       })
     } else {
       throw new Error ('Not Authorized to delete this Review')
@@ -132,6 +134,7 @@ function deleteReview(req,res){
 function createReview(req,res){
   Part.findById(req.params.id)
   .then(part =>{
+    req.body.owner=req.user.profile
     part.reviews.push(req.body)
     part.save()
     .then(() => {

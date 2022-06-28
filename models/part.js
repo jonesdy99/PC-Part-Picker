@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
   content: String,
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
 })

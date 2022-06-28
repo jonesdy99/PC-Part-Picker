@@ -22,7 +22,7 @@
 <% } %> 
 <h2>Review</h2>
   <form id="add-review-form" action="/parts/<%= part._id %>/reviews" method="POST">
-    <label for="content-textarea">Review</label>
+    <label for="content-textarea">Add Review</label>
     <textarea name="content" id="content-textarea"></textarea>
     <button type="submit">Add Review</button>
   </form>
@@ -30,7 +30,6 @@
     <table>
       <thead>
         <tr>
-          <th>Review</th>
         </tr>
       </thead>
       <tbody>
@@ -38,6 +37,13 @@
           <tr>
             <td><%= review.createdAt.toLocaleDateString() %></td>
             <td><%= review.content %></td>
+            <td>
+              <% if (part.owner.equals(user?.profile._id)) { %> 
+                <form action="/parts/<%= part._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                  <button class="btn" type="submit">Delete this Review</button>
+                </form>
+              <% } %>
+            </td>
           </tr>
         <% }) %>
       </tbody>
@@ -45,9 +51,4 @@
   <% } else { %>
     <h3>No Reviews Yet</h3>
   <% } %>
-  <% if (part.owner.equals(user?.profile._id)) { %> 
-    <form action="/review/<%= part._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">Delete this Review</button>
-    </form>
-  <% } %> 
 <%- include('../partials/footer') %>
