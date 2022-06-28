@@ -12,6 +12,7 @@ h2{
   display: flex;
   color: whitesmoke;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 .nav{
