@@ -1,3 +1,14 @@
+nav{
+  background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.create-title{
+  color: whitesmoke;
+  margin-bottom: 30px;
+}
 
 .title-text{
   display: flex;
@@ -49,15 +60,25 @@ nav{
   margin-bottom: 100px;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-image: url(../images/auth/google/Back-Drop-2.jpeg);
-  background-size: 200vh;
-  height: 100vh;
-  background-repeat: no-repeat;
+.background{
+  background-image: url(../images/auth/google/Build-Drop-1.jpeg);
+  background-size: cover;
+  height: 150vh;
+  filter: blur(4px);
 }
 
-
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4); 
+  color: whitesmoke;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}

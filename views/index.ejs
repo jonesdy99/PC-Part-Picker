@@ -4,8 +4,8 @@
 <link id="favicon" rel="shortcut icon" href="../public/images/auth/google/Icon.jpg" type="image/jpg" sizes="32x32">
 <%- include('./partials/nav') %>
 
-<main>
-  <h1>Welcome back, <%= user ? user.profile.name : "sign in to get started with building your dream PC" %></h1>
+<main class="home">
+  <h1 class="title-text">Welcome back, <%= user ? user.profile.name : "sign in to get started with building your dream PC" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img class="avatar"
@@ -14,7 +14,7 @@
       />
     </div>
   <% } %>
-  <h2>Here you will find top of the line hardware, ready to be tested and configured by you! Add your builds to a public board and compare with your friends!</h2>
+  <h2 class="info-text">Here you will find top of the line hardware, ready to be tested and configured by you! Add your builds to a public board and compare with your friends!</h2>
 </main>
 
 <%- include('./partials/footer') %>

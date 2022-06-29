@@ -6,13 +6,13 @@
 </head>
 <body>
   <nav>
-    <a class="nav" href="/parts">Build</a>
-    <a class="nav" href="/parts/new">All Builds</a>
-    <a class="nav" href="/profiles">Users</a>
-    <a class="nav" href="/">Home</a>
+    <a class="nav" href="/parts"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+    <a class="nav" href="/parts/new"><i class="fa-solid fa-computer"></i></a>
+    <a class="nav" href="/profiles"><i class="fa-solid fa-users"></i></a>
+    <a class="nav" href="/"><i class="fa-solid fa-house-chimney"></i></a>
     <% if (user) { %>
       <a href="/auth/logout">
-        <button class="logout" type="submit">Logout</button>
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">

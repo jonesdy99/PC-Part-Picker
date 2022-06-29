@@ -1,10 +1,13 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/home.css">
+<!-- <link rel="stylesheet" href="/stylesheets/home.css"> -->
+<link rel="stylesheet" href="/stylesheets/create-page.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%- include('../partials/nav') %>
+<div class="background"></div>
 
+<div class="bg-text">
 <main>
-  <h1><%= title %></h1>
+  <h1 class="create-title"><%= title %></h1>
   <form id="new-form" action="/parts" method="POST">
     <label for="title-input">Title:</label>
     <input type="text" name="title" id="title-input">
@@ -88,6 +91,7 @@
       <option value="Corsair-V-RGB">Corsair Vengence *RGB* Pro DDR4-3200Mhz (4 x 8GB)</option>
     </select>
     <button type="submit">Add Finalized PC</button>
+  </div>
   </form>
 </main>
 
