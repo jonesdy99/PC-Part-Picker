@@ -65,3 +65,14 @@ nav{
   background-repeat: no-repeat;
 }
 
+.user-page{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-avatar{
+  border-radius: 50px;
+}
+

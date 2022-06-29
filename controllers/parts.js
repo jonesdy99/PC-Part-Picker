@@ -34,6 +34,7 @@ function create(req,res){
 
 function newBuild(req,res){
   Part.find({})
+  .populate('owner')
   .then(parts => {
     res.render('parts/new', {
       parts,
@@ -49,7 +50,9 @@ function newBuild(req,res){
 function show(req,res){
   Part.findById(req.params.id)
   .populate('owner')
+  .populate('reviews.owner')
   .then(part => {
+    console.log('BANANA******',part.reviews)
     res.render('parts/show', {
       part,
       title: 'Detailed PC info'
