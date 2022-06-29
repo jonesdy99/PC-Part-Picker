@@ -19,3 +19,8 @@
   padding: 20px;
   text-align: center;
 }
+
+.nav:hover{
+  opacity: 0.5;
+  height: 20px;
+}

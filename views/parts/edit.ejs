@@ -1,13 +1,18 @@
 <%- include('../partials/html-head') %>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/stylesheets/home.css">
+<link rel="stylesheet" href="/stylesheets/create-page.css">
 <%- include('../partials/nav') %>
+<div class="background"></div>
 
+
+<div class="bg-text">
 <section>
   <h1>Edit this PC</h1>
   <form id="new-form" action="/parts/<%= part._id %>?_method=PUT" method="POST">
     <label for="title-input">Title:</label>
-    <input type="text" name="title" value="<%= part.title %>" id="title-input">
+    <input class="title" type="text" name="title" value="<%= part.title %>" id="title-input">
+    <br>
     <label for="case-input">Case:</label>
     <select name="case" id="case-select">
       <option value="<%= part.case %>"><%= part.case %></option>
@@ -21,8 +26,10 @@
       <option value="Dark-Base">Dark Base Pro 9000</option>
       <option value="Lian">Lian-Li PC-011 Dynamic</option>
       </select>
+      <br>
+      <br>
     <label for="graphic-select">Graphics Card:</label>
-    <select name="graphic" id="graphic-select">
+    <select class="graphic" name="graphic" id="graphic-select">
       <option value="<%= part.graphic %>"><%= part.graphic %></option>
       <option value="NVIDA GTX 3090Ti">NVIDA GTX 3090Ti</option>
       <option value="NVIDA GTX 3090">NVIDA GTX 3090</option>
@@ -41,8 +48,9 @@
       <option value="NVIDA GTX 1660Ti">NVIDA GTX 1660Ti</option>
       <option value="NVIDA GTX 1660">NVIDA GTX 1660</option>
     </select>
+    <br>
     <label for="motherbo-select">Mother Board:</label>
-    <select name="motherbo" id="motherbo-select">
+    <select class="motherbo" name="motherbo" id="motherbo-select">
       <option value="<%= part.motherbo %>"><%= part.motherbo %></option>
       <option value="Gigabyte Z690 Aorus Pro">Gigabyte Z690 Aorus Pro</option>
       <option value="MSI MEG Z690I Unify">MSI MEG Z690I Unify</option>
@@ -57,8 +65,9 @@
       <option value="Gigabyte X570 Aorus Ultra">Gigabyte X570 Aorus Ultra</option>
       <option value="Asus ROG Strix B550-F Gaming WIFI">sus ROG Strix B550-F Gaming WIFI</option>
     </select>
+    <br>
     <label for="storage-select">Storage:</label>
-    <select name="storage" id="storage-select">
+    <select class="storage" name="storage" id="storage-select">
       <option value="<%= part.storage %>"><%= part.storage %></option>
       <option value="5-TB-SSD">5TB SSD</option>
       <option value="2-TB-SSD">2TB SSD</option>
@@ -69,8 +78,9 @@
       <option value="2-TB-HDD">2TB HDD</option>
       <option value="1-TB-HDD">1TB HDD</option>
     </select>
+    <br>
     <label for="psu-select">PSU:</label>
-    <select name="psu" id="psu-select">
+    <select class="psu" name="psu" id="psu-select">
       <option value="<%= part.psu %>"><%= part.psu %></option>
       <option value="Cooler-Master-MasterWatt">Cooler Master MasterWatt-1200W</option>
       <option value="Corsair-AXi-860">Corsair AXi-860W</option>
@@ -80,8 +90,9 @@
       <option value="Corsair-SF-600">Corsair SF 600W</option>
       <option value="Corsair-SF-450">Corsair SF 450W</option>
     </select>
+    <br>
     <label for="ram-select">RAM:</label>
-    <select name="ram" id="ram-select">
+    <select class="ram" name="ram" id="ram-select">
       <option value="<%= part.ram %>"><%= part.ram %></option>
       <option value="GSkill-Trident-Z5">G.Skill Trident Z5 *RGB* DDR5-6000Mhz (2 x 16GB)</option>
       <option value="Samsung-DDR5-4800">Samsung DDR5-4800Mhz (2 x 16GB)</option>
@@ -91,7 +102,9 @@
       <option value="Patriot-Viper-4">Patriot Viper 4 DDR4-3400Mhz (2 x 8GB)</option>
       <option value="Corsair-V-RGB">Corsair Vengence *RGB* Pro DDR4-3200Mhz (4 x 8GB)</option>
     </select>
-    <button type="submit">Complete Edit</button>
+    <br>
+    <button class="add" type="submit">Complete Edit</button>
+  </div>
 </section>
 
 <%- include('../partials/footer') %>

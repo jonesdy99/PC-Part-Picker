@@ -29,6 +29,11 @@
   color: whitesmoke;
 }
 
+.nav:hover{
+  opacity: 0.5;
+  height: 20px;
+}
+
 nav{
   background-color: #333;
   font-family: 'Poppins', sans-serif;

@@ -19,15 +19,22 @@
 .card {
   display: flex;
   width: 300px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: #333;
+  border: 2px solid whitesmoke;
   border-radius: 10px;
-  color: black;
+  color: whitesmoke;
   padding: 10px;
+  transition: all 0.4s ease-out;
+}
+
+.card:hover{
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
 }
 
 .card > img {
-  border-radius: 10px;
+  border-radius: 50px;
   height: 96px;
 }
 
@@ -47,6 +54,11 @@
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: whitesmoke;
+}
+
+.nav:hover{
+  opacity: 0.5;
+  height: 20px;
 }
 
 nav{
