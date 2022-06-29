@@ -1,9 +1,3 @@
-nav{
-  background-color: #333;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: whitesmoke;
-}
 
 .create-title{
   color: whitesmoke;
@@ -42,11 +36,6 @@ nav{
   color: whitesmoke;
 }
 
-.login{
-  margin-left: 100px;
-  font-family: 'Poppins', sans-serif;
-}
-
 .logout{
   margin-left: 100px;
   background-color: #333;
@@ -55,10 +44,6 @@ nav{
   border-color: whitesmoke;
 }
 
-.avatar{
-  border-radius: 50%;
-  margin-bottom: 100px;
-}
 
 .background{
   background-image: url(../images/auth/google/Build-Drop-1.jpeg);

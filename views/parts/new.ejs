@@ -7,9 +7,9 @@
 
 <section>
   <h2>All the PC's</h2>
-  <ul class="bg-text">
+  <ul>
     <% parts.forEach(part => { %>
-      <li class="name">Name: <a href="/parts/<%= part._id %>"><%= part.title %></a>
+      <li class="bg-text">Name: <a href="/parts/<%= part._id %>"><%= part.title %></a>
         <br>
           Case: <%= part.case %>
           <br>

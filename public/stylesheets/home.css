@@ -49,7 +49,7 @@ nav{
   margin-bottom: 100px;
 }
 
-main {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
