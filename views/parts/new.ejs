@@ -1,21 +1,29 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/home.css">
+<link rel="stylesheet" href="/stylesheets/all-pc-page.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%- include('../partials/nav') %>
 
 
 <section>
   <h2>All the PC's</h2>
-  <ul>
+  <ul class="bg-text">
     <% parts.forEach(part => { %>
-      <li>Name:<a href="/parts/<%= part._id %>"><%= part.title %></a>
-          Case:<%= part.case %>
-          Graphics Card:<%= part.graphic %>
-          MotherBoard:<%= part.motherbo %>
-          Storage:<%= part.storage %>
-          Power Supply:<%= part.psu %>
-          RAM:<%= part.ram %>
-          Owner:<%= part.owner %>
+      <li class="name">Name: <a href="/parts/<%= part._id %>"><%= part.title %></a>
+        <br>
+          Case: <%= part.case %>
+          <br>
+          Graphics Card: <%= part.graphic %>
+          <br>
+          MotherBoard: <%= part.motherbo %>
+          <br>
+          Storage: <%= part.storage %>
+          <br>
+          Power Supply: <%= part.psu %>
+          <br>
+          RAM: <%= part.ram %>
+          <br>
+          Owner: <%= part.owner %>
       </li>
     <% }) %> 
   </ul>

@@ -82,3 +82,44 @@ nav{
   padding: 20px;
   text-align: center;
 }
+
+.title{
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.add{
+  margin-top: 20px;
+  align-items: center;
+}
+
+.case{
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.graphic{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.motherbo{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.storage{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.psu{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ram{
+  align-items: center;
+  margin-bottom: 20px;
+}
