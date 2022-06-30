@@ -4,7 +4,7 @@
 <%- include('./partials/nav') %>
 
 <main class="home">
-  <h1 class="title-text">Welcome back, <%= user ? user.profile.name : "sign in to get started with building your dream PC" %></h1>
+  <h1 class="title-text">Hey, <%= user ? user.profile.name : "sign in to get started with building your dream PC" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img class="avatar"
@@ -13,7 +13,11 @@
       />
     </div>
   <% } %>
-  <h2 class="info-text">Here you will find top of the line hardware, ready to be tested and configured by you! Add your builds to a public board and compare with your friends!</h2>
+  <% if (user) { %>
+    <h2 class="info-text">Welcome home, lets get started with building your dream PC.</h2>
+    <button class="build-btn">Start Building</button>
+  <% } %>
+  <!-- <h2 class="info-text">Welcome home, lets get started with building your dream PC.</h2> -->
 </main>
 
 <%- include('./partials/footer') %>
