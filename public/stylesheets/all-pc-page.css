@@ -15,9 +15,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 70%;
+  width: 50%;
   padding: 20px;
-  text-align: center;
+  text-align: relative;
   font-family: 'Poppins', sans-serif;
   
 }
@@ -33,4 +33,11 @@
   align-items: center;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.all-pc-page-show{
+  background-image: url(../images/auth/google/Back-Drop-5.jpeg);
+  background-size: cover;
+  background-position: 20% 20%;
 }

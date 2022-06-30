@@ -1,3 +1,8 @@
+# https://pc-part-picker.herokuapp.com/
+# https://trello.com/b/pLJ61zMh/pc-part-picker
+
+
+
 # **PC-Part-Picker**
 ## Users will be able to stub up a new PC through a series of options provided through dropdown text boxes. Users will then be able to interact with other users PC's and leave suggestions on the build.
 ---
