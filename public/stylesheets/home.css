@@ -59,10 +59,12 @@ nav{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url(../images/auth/google/Back-Drop-2.jpeg);
+  background-image: url(../images/auth/google/Back-Drop-3.jpeg);
   background-size: 200vh;
   height: 100vh;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 39% 39%;
 }
 
 .user-page{

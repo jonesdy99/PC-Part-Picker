@@ -39,7 +39,7 @@
             <td><%= review.content %></td>
             <td><%= review.owner.name %></td>
             <td>
-              <% if (part.owner.equals(user?.profile._id)) { %> 
+              <% if (review.owner.equals(user?.profile._id)) { %> 
                 <form action="/parts/<%= part._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
                   <button class="btn" type="submit">Delete this Review</button>
                 </form>

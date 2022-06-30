@@ -15,12 +15,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
+  width: 70%;
   padding: 20px;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  
 }
 
 .nav:hover{
   opacity: 0.5;
   height: 20px;
+}
+
+.pc-h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
