@@ -4,7 +4,7 @@
 <%- include('./partials/nav') %>
 
 <main class="home">
-  <h1 class="title-text">Hey, <%= user ? user.profile.name : "sign in to get started with building your dream PC" %></h1>
+  <h1 class="title-text">Hey, <%= user ? user.profile.name : "sign in to get started" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img class="avatar"

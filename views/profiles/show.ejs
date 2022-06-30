@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/home.css">
+<link rel="stylesheet" href="/stylesheets/profiles/user-page.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%- include('../partials/nav') %>
 
@@ -17,22 +18,22 @@
   <% if (isSelf) { %>
     <h2>Add your desired budget</h2>
     <form action="/profiles/<%= profile._id %>/budget" method="POST">
-      <label>
-        Desired Budget:
-        <input type="number" name="budget" autocomplete="off">
+      <label class="form__label">
+        Desired Budget : 
+        <input class="form__field" type="number" name="budget" autocomplete="off">
       </label>
-      <button type="submit">Add your desired budget</button>
+      <button class="add-btn" type="submit">Add</button>
     </form>
   <% } %>
   <% if (profile.budget.length) { %>
     <h2>
-      <%= isSelf ? 'You have' : `${profile.name} has`%> a budget of <%= profile.budget[0].budget %>   
+      <%= isSelf ? 'You have' : `${profile.name} has`%> a budget of $<%= profile.budget[0].budget %>   
     </h2>
     <% profile.budget.forEach((budget,idx) => { %>
       <h3>
         <% if (isSelf) { %>
           <form action="/profiles/budget/<%= budget._id %>?_method=DELETE" method="POST" style="display: inline-block;">
-            <button type="submit">Delete current budget of <%= profile.budget[idx].budget %> </button>
+            <button class="delete-btn" type="submit">Delete current budget of <%= profile.budget[idx].budget %> </button>
           </form>
         <% } %> 
       </h3>
