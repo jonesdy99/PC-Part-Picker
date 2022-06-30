@@ -1,0 +1,55 @@
+.header{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.btn-edit-show{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.btn-delete-show{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.review{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.review-content{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.delete-review-btn{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+}
+
+.background{
+  background-image: url(../images/auth/google/Back-Drop-6.jpeg);
+  background-position: 100% 100%;
+  background-size: cover;
+}

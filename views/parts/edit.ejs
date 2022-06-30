@@ -1,12 +1,12 @@
 <%- include('../partials/html-head') %>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/stylesheets/home.css">
+<!-- <link rel="stylesheet" href="/stylesheets/home.css"> -->
 <link rel="stylesheet" href="/stylesheets/create-page.css">
 <%- include('../partials/nav') %>
 <div class="background"></div>
 
 
-<div class="bg-text">
+<div class="bg-text-2">
 <section>
   <h1>Edit this PC</h1>
   <form id="new-form" action="/parts/<%= part._id %>?_method=PUT" method="POST">
@@ -14,7 +14,7 @@
     <input class="title" type="text" name="title" value="<%= part.title %>" id="title-input">
     <br>
     <label for="case-input">Case:</label>
-    <select name="case" id="case-select">
+    <select class="case" name="case" id="case-select">
       <option value="<%= part.case %>"><%= part.case %></option>
       <option value="Cooler-Master-Cosmos">Cooler Master Cosmos C700P</option>
       <option value="Corsair-Carbide">Cosair Carbide 275R</option>

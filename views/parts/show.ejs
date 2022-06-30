@@ -1,33 +1,47 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/home.css">
+<link rel="stylesheet" href="/stylesheets/show-page.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<div clas="background"></div>
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>This Pc was built by <%= part.owner.name %></h1>
-  <h2><%= part.title %></h2>
-  <h3>Case:<%= part.case %>
-    Graphics Card:<%= part.graphic %>
-    MotherBoard:<%= part.motherbo %>
-    Storage:<%= part.storage %>
-    Power Supply:<%= part.psu %>
-    RAM:<%= part.ram %></h3>
+<main class="background">
+<section class="header">
+  <h1 class="header">This Pc was built by <%= part.owner.name %></h1>
+  <h2 class="header"><%= part.title %></h2>
+  <h3 class="header">Case: <%= part.case %>
+    <br>
+    <br>
+    Graphics Card: <%= part.graphic %>
+    <br>
+    <br>
+    MotherBoard: <%= part.motherbo %>
+    <br>
+    <br>
+    Storage: <%= part.storage %>
+    <br>
+    <br>
+    Power Supply: <%= part.psu %>
+    <br>
+    <br>
+    RAM: <%= part.ram %></h3>
 </section>
 <% if (part.owner.equals(user?.profile._id)) { %> 
-  <form action="/parts/<%= part._id %>/edit" method="GET">
-    <button class="btn" type="submit">Edit this PC</button>
+  <form class="btn-edit-show" action="/parts/<%= part._id %>/edit" method="GET">
+    <button class="btn-edit-show-btn" type="submit">Edit this PC</button>
   </form>
-  <form action="/parts/<%= part._id %>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete this PC</button>
+  <form class="btn-delete-show" action="/parts/<%= part._id %>?_method=DELETE" method="POST">
+    <button class="btn-delete-show-btn" type="submit">Delete this PC</button>
   </form>
 <% } %> 
-<h2>Review</h2>
-  <form id="add-review-form" action="/parts/<%= part._id %>/reviews" method="POST">
+<h2 class="review">Review</h2>
+  <form class="review" id="add-review-form" action="/parts/<%= part._id %>/reviews" method="POST">
     <label for="content-textarea">Add Review</label>
     <textarea name="content" id="content-textarea"></textarea>
-    <button type="submit">Add Review</button>
+    <button type="submit">Post</button>
   </form>
   <% if (part.reviews.length) { %>
-    <table>
+    <table class="review-content">
       <thead>
         <tr>
         </tr>
@@ -35,13 +49,13 @@
       <tbody>
         <% part.reviews.forEach(function(review) { %>
           <tr>
-            <td><%= review.createdAt.toLocaleDateString() %></td>
-            <td><%= review.content %></td>
-            <td><%= review.owner.name %></td>
-            <td>
+            <td class="review-content"><%= review.createdAt.toLocaleDateString() %></td>
+            <td class="review-content"><%= review.content %></td>
+            <td class="review-content">By <%= review.owner.name %></td>
+            <td class="review-content">
               <% if (review.owner.equals(user?.profile._id)) { %> 
-                <form action="/parts/<%= part._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                  <button class="btn" type="submit">Delete this Review</button>
+                <form class="review-content" action="/parts/<%= part._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                  <button class="delete-review-btn" type="submit">Delete this Review</button>
                 </form>
               <% } %>
             </td>
@@ -50,6 +64,7 @@
       </tbody>
     </table>
   <% } else { %>
-    <h3>No Reviews Yet</h3>
+    <h3 class="review">No Reviews Yet</h3>
   <% } %>
+</main>
 <%- include('../partials/footer') %>
