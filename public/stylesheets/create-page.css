@@ -283,4 +283,19 @@ nav{
   background-color: #333;
   font-size: 14px;
   color: whitesmoke;
+  margin-right: 40px;
+}
+
+@media screen and (max-width:740px){
+  .ram{
+    width: 60%;
+  }
+
+  .psu{
+    width: 60%;
+  }
+
+  .graphic{
+    width: 60%;
+  }
 }

@@ -176,3 +176,8 @@
   margin-right: 30px;
 }
 
+@media screen and (max-width:740px){
+  .add-btn{
+    margin-top: 20px;
+  }
+}
