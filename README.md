@@ -1,5 +1,5 @@
-# https://pc-part-picker.herokuapp.com/
-# https://trello.com/b/pLJ61zMh/pc-part-picker
+# <a href="https://pc-part-picker.herokuapp.com/">Deployed Link</a>
+# <a href="https://trello.com/b/pLJ61zMh/pc-part-picker">Planning</a>
 
 
 
