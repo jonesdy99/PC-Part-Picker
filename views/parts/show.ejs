@@ -57,7 +57,7 @@
             <td class="review-content">
               <% if (review.owner.equals(user?.profile._id)) { %> 
                 <form class="review-content" action="/parts/<%= part._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                  <button class="delete-review-btn" type="submit">Delete this Review</button>
+                  <button class="delete-review-btn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
                 </form>
               <% } %>
             </td>
