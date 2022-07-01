@@ -7,9 +7,14 @@
 
 <main class="background">
 <section class="header">
-  <h1 class="header">This Pc was built by <%= part.owner.name %></h1>
-  <h2 class="header"><%= part.title %></h2>
-  <h3 class="header">Case: <%= part.case %>
+  <% if (part.owner.equals(user?.profile._id)) { %> 
+    <form class="btn-delete-show" action="/parts/<%= part._id %>?_method=DELETE" method="POST">
+      <button class="btn-delete-show-btn" type="submit"><i class="fa-solid fa-skull-crossbones"></i></button>
+    </form>
+    <% } %> 
+  <h1 class="header-name">This Pc was built by <%= part.owner.name %></h1>
+  <h2 class="header-title">Build Name: <%= part.title %></h2>
+  <h3 class="header-parts">Case: <%= part.case %>
     <br>
     <br>
     Graphics Card: <%= part.graphic %>
@@ -28,17 +33,14 @@
 </section>
 <% if (part.owner.equals(user?.profile._id)) { %> 
   <form class="btn-edit-show" action="/parts/<%= part._id %>/edit" method="GET">
-    <button class="btn-edit-show-btn" type="submit">Edit this PC</button>
-  </form>
-  <form class="btn-delete-show" action="/parts/<%= part._id %>?_method=DELETE" method="POST">
-    <button class="btn-delete-show-btn" type="submit">Delete this PC</button>
+    <button class="btn-edit-show-btn" type="submit">Edit PC <i class="fa-solid fa-pencil"></i></button>
   </form>
 <% } %> 
 <h2 class="review">Review</h2>
   <form class="review" id="add-review-form" action="/parts/<%= part._id %>/reviews" method="POST">
     <label for="content-textarea">Add Review</label>
-    <textarea name="content" id="content-textarea"></textarea>
-    <button type="submit">Post</button>
+    <textarea class="review-text-area" name="content" id="content-textarea"></textarea>
+    <button class="post-btn" type="submit">Post</button>
   </form>
   <% if (part.reviews.length) { %>
     <table class="review-content">
@@ -48,7 +50,7 @@
       </thead>
       <tbody>
         <% part.reviews.forEach(function(review) { %>
-          <tr>
+          <tr class="review-content-review">
             <td class="review-content"><%= review.createdAt.toLocaleDateString() %></td>
             <td class="review-content"><%= review.content %></td>
             <td class="review-content">By <%= review.owner.name %></td>
